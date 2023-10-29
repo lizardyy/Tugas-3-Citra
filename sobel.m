@@ -16,6 +16,5 @@ function result = sobel(grayImage, threshold)
     % Remove pixel tapi to 0 
     result([1 end], :) = 0; % Top and bottom rows
     result(:, [1 end]) = 0; % Left and right columns
-    disp(result)
 end
 
