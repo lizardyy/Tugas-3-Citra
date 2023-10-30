@@ -1,9 +1,9 @@
-% Pendeteksian tepi dengan dengan operator laplace of gaussian
-function result = sobel(grayImage, threshold)
+% Pendeteksian tepi dengan dengan operator sobel
+function result = sobel(grayImage, c, threshold)
 
     % Sobel Kernels
-    sobelHorizontal = [-1, 0, 1; -2, 0, 2; -1, 0, 1];
-    sobelVertical = [1, 2, 1; 0, 0, 0; -1, -2, -1];
+    sobelHorizontal = [-1, 0, 1; -c, 0, c; -1, 0, 1];
+    sobelVertical = [1, c, 1; 0, 0, 0; -1, -c, -1];
 
     % Convolve image with Sobel kernels
     gradientX = conv2(double(grayImage), double(sobelHorizontal), 'same');
