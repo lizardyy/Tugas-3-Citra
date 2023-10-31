@@ -10,7 +10,7 @@ function result = laplaceOfGaussian(grayImage, size, sigma, threshold)
     result = uint8(result);
     result = result > threshold;
     
-    % Remove pixel tapi to 0 
+    % Change pixel tepi to 0 
     result([1 end], :) = 0; % Top and bottom rows
     result(:, [1 end]) = 0; % Left and right columns
 end
